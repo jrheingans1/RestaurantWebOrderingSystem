@@ -19,7 +19,6 @@ import model.IMenuStrategy;
 import model.MenuItem;
 import model.OrderModel;
 
-
 /**
  *
  * @author James
@@ -43,31 +42,31 @@ public class OrderController extends HttpServlet {
         HttpSession hs = request.getSession();
         Object obj = hs.getAttribute("database");
         IMenuStrategy ims = (IMenuStrategy) obj;
-        
+
         String[] drinks = request.getParameterValues("drink");
         String[] appetizers = request.getParameterValues("appetizer");
         String[] entrees = request.getParameterValues("entree");
-        
+
         ArrayList<MenuItem> drinkItems = new ArrayList<MenuItem>();
         ArrayList<MenuItem> appetizerItems = new ArrayList<MenuItem>();;
         ArrayList<MenuItem> entreeItems = new ArrayList<MenuItem>();;
-        
-        if(drinks != null) {
-             drinkItems = om.getItems(ims, drinks);
+
+        if (drinks != null) {
+            drinkItems = om.getItems(ims, drinks);
         }
-        
-        if(appetizers != null) {
+
+        if (appetizers != null) {
             appetizerItems = om.getItems(ims, appetizers);
         }
-        
-        if(entrees != null) {
+
+        if (entrees != null) {
             entreeItems = om.getItems(ims, entrees);
         }
-        
+
         request.setAttribute("drinks", drinkItems);
         request.setAttribute("appetizers", appetizerItems);
         request.setAttribute("entrees", entreeItems);
-        
+
         RequestDispatcher view = request.getRequestDispatcher("total.jsp");
         view.forward(request, response);
     }

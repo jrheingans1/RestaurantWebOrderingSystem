@@ -10,5 +10,6 @@ package model;
  * @author James
  */
 public enum ItemType {
+
     DRINK, APPETIZER, ENTREE;
 }

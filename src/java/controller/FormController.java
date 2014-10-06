@@ -18,7 +18,6 @@ import model.FakeDB;
 import model.IMenuStrategy;
 import model.MySQL_DB;
 
-
 /**
  *
  * @author James
@@ -38,13 +37,13 @@ public class FormController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
+
         //IMenuStrategy ims = new FakeDB();
         IMenuStrategy ims = new MySQL_DB("jdbc:mysql://localhost:3306/restaurant", "root", "admin");
-        
+
         HttpSession session = request.getSession(true);
         session.setAttribute("database", ims);
-        
+
         RequestDispatcher view = request.getRequestDispatcher("order.jsp");
         view.forward(request, response);
     }

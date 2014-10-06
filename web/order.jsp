@@ -22,8 +22,8 @@
             HttpSession s = request.getSession();
             Object dbStrat = s.getAttribute("database");
             IMenuStrategy ims = null;
-           
-            if(dbStrat == null) {
+
+            if (dbStrat == null) {
                 out.println("There was an error");
             } else {
                 ims = (IMenuStrategy) dbStrat;
@@ -39,17 +39,17 @@
                 <hr>
                 <%
                     ArrayList<MenuItem> drinks = new ArrayList<MenuItem>();
-                    
+
                     NumberFormat f = NumberFormat.getCurrencyInstance();
                     drinks = ims.getMenuItems(ItemType.DRINK);
-                    
-                    for(MenuItem i : drinks) {
-                        
-                    
+
+                    for (MenuItem i : drinks) {
+
+
                 %>
                 <input type="checkbox" name="drink" value="<% out.println(i.getItemName()); %>"> <% out.println(i.getItemName() + " - " + f.format(i.getItemPrice())); %><br>
                 <%
-                    }    
+                    }
                 %>
             </div>
             <div class="contentHolder">
@@ -58,14 +58,14 @@
                 <%
                     ArrayList<MenuItem> apps = new ArrayList<MenuItem>();
                     apps = ims.getMenuItems(ItemType.APPETIZER);
-                    
-                    for(MenuItem i : apps) {
-                        
-                    
+
+                    for (MenuItem i : apps) {
+
+
                 %>
                 <input type="checkbox" name="appetizer" value="<% out.println(i.getItemName()); %>"> <% out.println(i.getItemName() + " - " + f.format(i.getItemPrice())); %><br>
                 <%
-                    }    
+                    }
                 %>
             </div>
             <div class="contentHolder">
@@ -74,14 +74,14 @@
                 <%
                     ArrayList<MenuItem> entrees = new ArrayList<MenuItem>();
                     entrees = ims.getMenuItems(ItemType.ENTREE);
-                    
-                    for(MenuItem i : entrees) {
-                        
-                    
+
+                    for (MenuItem i : entrees) {
+
+
                 %>
                 <input type="checkbox" name="entree" value="<% out.println(i.getItemName()); %>"> <% out.println(i.getItemName() + " - " + f.format(i.getItemPrice())); %><br>
                 <%
-                    }    
+                    }
                 %>
             </div>
             <div class="contentHolder" style="text-align:center;">

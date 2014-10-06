@@ -10,14 +10,15 @@ package model;
  * @author James
  */
 public class MenuItem {
+
     private String itemName;
     private Double itemPrice;
     private ItemType itemType;
-    
+
     private static String ERR_NEW_ITEM = "One of the fields in the item creation was null or equal to nothing";
 
     public MenuItem(String itemName, Double itemPrice, ItemType itemType) throws IllegalArgumentException {
-        if(itemName.equalsIgnoreCase("") || itemPrice < 0 || itemType == null) {
+        if (itemName.equalsIgnoreCase("") || itemPrice < 0 || itemType == null) {
             throw new IllegalArgumentException(ERR_NEW_ITEM);
         } else {
             this.itemName = itemName;
@@ -25,7 +26,7 @@ public class MenuItem {
             this.itemType = itemType;
         }
     }
-    
+
     public String getItemName() {
         return itemName;
     }
@@ -49,6 +50,5 @@ public class MenuItem {
     public void setItemType(ItemType itemType) {
         this.itemType = itemType;
     }
-    
-    
+
 }
