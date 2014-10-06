@@ -8,19 +8,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Ben and Jack's Steak House</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <form method="post" action="FormController" name="newOrderForm">
-            <div class="contentHolder topHeader">Restaurant Ordering System</div>
+            <div class="contentHolder topHeader">Ben and Jack's Steak House</div>
             <div class="contentHolder">
-                <span class="header">Start a New Order</span>
+                <span class="header">You are beginning a new order</span>
                 <hr>
-                Click the button to begin a new order!<br>
-                <input type="submit" name="newOrder" value="New Order">
+                <br>
+                <div class="imgField"><img src="images/ben-jack-s-steak-house.jpg" alt="ben and jack steak house" height="400" width="400"></div>
+                <br>
+                <div class="buttonNewOrder"><input type="submit" name="newOrder" value="Click Here to Begin New Order"></div>
             </div>
         </form>
     </body>

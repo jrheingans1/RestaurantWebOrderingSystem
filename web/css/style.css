@@ -20,45 +20,55 @@ body{
 
 .internalContent{
     text-align:center;
-    
+
     margin:20px;
 }
 
 .title{
     font-size:18px;
     font-weight:bold;
-    
+
     color:#2299a2;
 }
 
 .topHeader{
-    font-size:30px;
+    font-size:45px;
     font-weight:bold;
-    
-    color:#FF6524;
-    
+
+    color:#008000;
+
     text-align:center;
 }
 
 .header{
     font-size:20px;
     font-weight:bold;
-    
+
     color:#3887D6;
 }
 
 .contentHolder{
-    width:80%;
+    width:auto;
     height:auto;
-    
+
     padding:10px;
     margin:20px auto;
-    
-    background-color:white;
+
+    background-color:black;
     box-shadow: 5px 5px 5px #EDFFD9;
-    
+
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px; /* future proofing */
     -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+.imgField{
+    text-align:center;
+}
+
+.buttonNewOrder{
+    text-align:center
+}
+.totalReciept{
+    color:#FFFFFF;
 }

@@ -62,7 +62,7 @@
         <div class="contentHolder">
             <span class="header">Total</span>
             <hr>
-            <center>
+            <div class="totalReciept"><center>
                 <%
                     double total = 0;
                     for (MenuItem i : drinks) {
@@ -76,7 +76,7 @@
                     }
                     out.println(f.format(total));
                 %>
-            </center>
+                </center></div>
         </div>
     </body>
 </html>
